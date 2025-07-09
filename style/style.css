@@ -322,3 +322,44 @@ body {
   height: auto;
   display: block;
 }
+/*SECTION FILOSOFIA*/
+.filosofia {
+  background-color: #000; 
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.filosofia .contenido {
+  max-width: 650px;
+  width: 100%;
+  line-height: 1.8;
+}
+
+.filosofia p {
+  margin-bottom: 20px;
+}
+
+.filosofia {
+  position: relative;
+  padding: 60px 40px;
+  color: #fff; /* texto claro para contraste */
+  overflow: hidden;
+}
+
+.filosofia::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url(../imagenes/filo.jpg) no-repeat center center/cover;
+  opacity: 0.1; /* ajusta transparencia */
+  z-index: 0;
+}
+
+.filosofia .contenido {
+  position: relative;
+  z-index: 1;
+}
