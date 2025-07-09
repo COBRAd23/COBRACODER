@@ -60,6 +60,7 @@
   background-color: #000 !important;
 }
 
+
 .footer a:hover {
   color: #ffcc00 !important;
   transition: color 0.3s ease;
@@ -68,3 +69,30 @@
 .footertop i {
   margin-right: 5px;
 }
+
+.section_one_inicio {
+  font-size: small;
+  line-height: 1.2;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Opcional: para pantallas chicas, reducir padding */
+@media (max-width: 768px) {
+  .section_one_inicio {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.logo-cobra {
+  max-width: 600px; /* Tamaño máximo en pantallas grandes */
+  width: 100%;      /* Que ocupe hasta el 100% del contenedor */
+  height: auto;     /* Mantener proporción */
+}
+
+@media (max-width: 768px) {
+  .logo-cobra {
+    max-width: 300px; /* Tamaño más chico en tablets y móviles */
+  }
+}
+
