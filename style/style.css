@@ -17,7 +17,7 @@ body {
 }
 
 .navbar.bg-dark {
-  background-color: #111 !important; /* o el color que prefieras */
+  background-color: #111 !important; 
   border-bottom: 1px solid #333;
 }
 
