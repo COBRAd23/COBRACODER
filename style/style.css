@@ -50,3 +50,21 @@
 .navbar .redes a {
   text-decoration: none;
 }
+
+.footer {
+  border-top: 1px solid #000000;
+  font-size: 0.9rem;
+}
+
+.footer.bg-dark {
+  background-color: #000 !important;
+}
+
+.footer a:hover {
+  color: #ffcc00 !important;
+  transition: color 0.3s ease;
+}
+
+.footertop i {
+  margin-right: 5px;
+}
