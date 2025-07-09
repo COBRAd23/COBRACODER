@@ -8,6 +8,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
 /* font-family: "Montserrat", sans-serif;*/
 
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar.bg-dark {
   background-color: #111 !important; /* o el color que prefieras */
   border-bottom: 1px solid #333;
@@ -144,4 +152,173 @@
 
 .boton:hover {
   background-color: #444;
+}
+.h2style {
+  background-image: url(../assets/imagenes/fondo.jpg); 
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  color: white;                   
+  padding: 10px 5px;            
+  text-align: center;             
+}
+
+.imagenes-dobles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.imagenes-dobles img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.serviciospage {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.serviciopage1 {
+  width: 19%; /* Un poco menos que 20% para dejar espacio entre columnas */
+  box-sizing: border-box;
+}
+
+.servicio h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.servicio ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.imagenes-dobles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 2rem;
+}
+
+.imagen-link {
+  text-decoration: none;
+}
+
+.imagen-contenedor {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagen-contenedor img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.imagen-contenedor:hover .overlay {
+  opacity: 1;
+}
+
+.titulo {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contenedor-boton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.boton-arriba {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-arriba:hover {
+  background-color: #333;
+}
+/*CONTACTO*/
+.formulario-contacto {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.formulario-contacto button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #e0e0e0;
+}
+.img-full {
+  width: 100%;
+  height: auto;
+  display: block;
 }

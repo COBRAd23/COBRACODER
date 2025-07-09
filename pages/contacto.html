@@ -39,7 +39,35 @@
     </nav>
   </header>
 
+  <main>
+    <section class="h2style">
+     <h2>CONTACTO</h2>
+    </section>
 
+    <section class="formulario-contacto">
+      <form action="https://formsubmit.co/cobradesign@outlook.com" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <!-- Evita captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Redirección después del envío -->
+        <input type="hidden" name="_next" value="https://PreEntrega1GonzalezLartigue/gracias.html" />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 
 
   <footer class="footer bg-dark text-light py-4 mt-auto">
