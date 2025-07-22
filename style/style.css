@@ -106,53 +106,7 @@ body {
   color: #000000;
 }
 
-.servicios-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
 
-.servicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 300px; 
-  padding: 1.5rem;
-  background-color: #f2f2f2;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.servicio:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-.icono-img {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-}
-
-.boton {
-  margin-top: auto; 
-  padding: 0.6rem 1.2rem;
-  background-color: #000;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.boton:hover {
-  background-color: #444;
-}
 .h2style {
   background-image: url(../assets/imagenes/fondo.jpg); 
   background-size: cover;         
@@ -435,3 +389,13 @@ body {
   height: auto;   
   }
 }
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
+
