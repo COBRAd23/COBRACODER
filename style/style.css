@@ -389,13 +389,4 @@ body {
   height: auto;   
   }
 }
-.btn-black {
-  background-color: #000;
-  color: #fff;
-  border: none;
-}
-
-.btn-black:hover {
-  background-color: #333;
-}
 
