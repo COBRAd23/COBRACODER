@@ -16,6 +16,7 @@ body {
   padding: 0;
 }
 
+/*Nabvar*/
 .navbar.bg-dark {
   background-color: #111; 
   border-bottom: 1px solid #333;
@@ -56,6 +57,7 @@ body {
   text-decoration: none;
 }
 
+/*FOOTER*/
 .footer {
   border-top: 1px solid #000000;
   font-size: 0.9rem;
@@ -98,7 +100,7 @@ body {
     max-width: 300px; 
   }
 }
-/*SERVICIOS INICIO*/
+
 .section_two_inicio {
   padding: 4rem 2rem;
   background-color: #ffffff;
@@ -106,7 +108,7 @@ body {
   color: #000000;
 }
 
-
+/*ENCABEZADOS HTMLS*/
 .h2style {
   background-image: url(../assets/imagenes/fondo.jpg); 
   background-size: cover;         
@@ -117,6 +119,7 @@ body {
   text-align: center;             
 }
 
+/*PORTFOLIO*/
 .imagenes-dobles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -130,28 +133,6 @@ body {
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.serviciospage {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  gap: 1rem;
-}
-
-.serviciopage1 {
-  width: 19%; /* Un poco menos que 20% para dejar espacio entre columnas */
-  box-sizing: border-box;
-}
-
-.servicio h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.servicio ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
-  font-size: 0.9rem;
 }
 
 .imagenes-dobles {
@@ -222,6 +203,49 @@ body {
 .boton-arriba:hover {
   background-color: #333;
 }
+
+/*FILOSOFIA*/
+.filosofia {
+  background-color: #000; 
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.filosofia .contenido {
+  max-width: 650px;
+  width: 100%;
+  line-height: 1.8;
+}
+
+.filosofia p {
+  margin-bottom: 20px;
+}
+
+.filosofia {
+  position: relative;
+  padding: 60px 40px;
+  color: #fff; 
+  overflow: hidden;
+}
+
+.filosofia::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url(../imagenes/filo.jpg) no-repeat center center/cover;
+  opacity: 0.1; /* ajusta transparencia */
+  z-index: 0;
+}
+
+.filosofia .contenido {
+  position: relative;
+  z-index: 1;
+}
+
 /*CONTACTO*/
 .formulario-contacto {
   background-color: #000;
@@ -276,117 +300,3 @@ body {
   height: auto;
   display: block;
 }
-/*SECTION FILOSOFIA*/
-.filosofia {
-  background-color: #000; 
-  color: #fff;
-  padding: 60px 20px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: left;
-  display: flex;
-  justify-content: center;
-}
-
-.filosofia .contenido {
-  max-width: 650px;
-  width: 100%;
-  line-height: 1.8;
-}
-
-.filosofia p {
-  margin-bottom: 20px;
-}
-
-.filosofia {
-  position: relative;
-  padding: 60px 40px;
-  color: #fff; 
-  overflow: hidden;
-}
-
-.filosofia::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url(../imagenes/filo.jpg) no-repeat center center/cover;
-  opacity: 0.1; /* ajusta transparencia */
-  z-index: 0;
-}
-
-.filosofia .contenido {
-  position: relative;
-  z-index: 1;
-}
-/*SERVICIO PAGE DATA*/
-.serviciospage2 {
-  background-image: url(../imagenes/FFC.jpg); opacity: 0.3; 
-  img {
-  margin-bottom: 40px; 
-  }
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  color: white;                   
-  padding: 100px 50px;            
-  text-align: center;             
-  line-height: 1.4;  
-  img {
-  width: 300px;   
-  height: auto;   
-  }
-}
-
-.serviciospage3 {
-  background-image: url(../imagenes/brandfond.jpg); opacity: 0.3; 
-  img {
-  margin-bottom: 40px; 
-  }
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  color: white;                   
-  padding: 100px 50px;            
-  text-align: center;             
-  line-height: 1.4;  
-  img {
-  width: 300px;   
-  height: auto;   
-  }
-}
-
-.serviciospage4 {
-  background-image: url(../imagenes/FFC.jpg); opacity: 0.3; 
-  img {
-  margin-bottom: 40px; 
-  }
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  color: white;                   
-  padding: 100px 50px;            
-  text-align: center;             
-  line-height: 1.4;  
-  img {
-  width: 300px;   
-  height: auto;   
-  }
-}
-
-.serviciospage5 {
-  background-image: url(../imagenes/CM.jpg); opacity: 0.3;  
-  img {
-  margin-bottom: 40px; 
-  }
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  color: white;                   
-  padding: 100px 50px;            
-  text-align: center;            
-  line-height: 1.4;  
-  img {
-  width: 300px;   
-  height: auto;   
-  }
-}
-
