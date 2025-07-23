@@ -246,6 +246,59 @@ body {
   z-index: 1;
 }
 
+/*SERVICIOS*/
+.row img {
+  max-width: 100%; 
+  height: auto;   
+  display: block; 
+  margin: 0 auto 1rem auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+.col h5 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.col ul {
+  padding-left: 1rem;
+  text-align: left;
+  list-style-type: disc;
+}
+
+.imagen-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imagen-overlay img {
+  width: 100%;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.imagen-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(243, 208, 8, 0.85); 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.imagen-overlay:hover::after {
+  opacity: 1;
+}
+
+.imagen-overlay:hover img {
+  filter: brightness(0.7);
+}
+
 /*CONTACTO*/
 .formulario-contacto {
   background-color: #000;
