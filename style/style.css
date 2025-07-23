@@ -18,11 +18,10 @@ body {
 
 /*Nabvar*/
 .navbar.bg-dark {
-  background-color: #111; 
-  border-bottom: 1px solid #333;
+  background-color: #000000; 
+  border-bottom: 1px solid #000000;
 }
 
-/* Marca / logo */
 .navbar-brand {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -30,7 +29,6 @@ body {
   color: #fff;
 }
 
-/* Enlaces del menú */
 .navbar-dark .navbar-nav .nav-link {
   color: #ccc;
   padding: 0.5rem 1rem;
@@ -38,7 +36,7 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #8d8d8b; /* color hover */
+  color: #8d8d8b; 
 }
 
 /* Íconos de redes sociales */
@@ -285,7 +283,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(243, 208, 8, 0.85); 
+  background-color: #ffcc00; 
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -298,6 +296,108 @@ body {
 .imagen-overlay:hover img {
   filter: brightness(0.7);
 }
+/*acordeón */
+.accordion-item {
+  background-color: #000; 
+  border: 1px solid #fff; 
+  color: #fff; 
+  transition: all 0.3s ease;
+}
+
+.accordion-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+
+.accordion-button:hover {
+  background-color: #FFD700; 
+  color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #000;
+  box-shadow: none;
+}
+
+.accordion-collapse {
+  background-color: #fff;
+  color: #000;
+}
+
+.accordion-button h6 {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accordion-button h6,
+.accordion-button.collapsed h6 {
+  transition: color 0.3s ease;
+}
+
+.accordion-button:hover h6 {
+  color: #000;
+}
+
+.accordion-item {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.accordion-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  background-color: #FFD700; 
+  color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #000;
+  box-shadow: none;
+}
+
+.accordion-collapse {
+  background-color: #fff;
+  color: #000;
+}
+
+.accordion-button h6 {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accordion-button h6,
+.accordion-button.collapsed h6 {
+  transition: color 0.3s ease;
+}
+
+.accordion-button:hover h6 {
+  color: #000;
+}
+
 
 /*CONTACTO*/
 .formulario-contacto {
