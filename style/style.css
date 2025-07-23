@@ -245,6 +245,10 @@ body {
 }
 
 /*SERVICIOS*/
+.alturasection {
+  padding: 4rem;
+}
+
 .row img {
   max-width: 100%; 
   height: auto;   
@@ -315,7 +319,6 @@ body {
 .accordion-button:focus {
   box-shadow: none;
 }
-
 
 .accordion-button:hover {
   background-color: #FFD700; 
@@ -396,6 +399,15 @@ body {
 
 .accordion-button:hover h6 {
   color: #000;
+}
+
+.accordion-button {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+.accordion-body {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 
