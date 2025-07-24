@@ -1,5 +1,11 @@
-@use "./components/nabvar";
-@use "./components/general";
-@use "./components/footer";
-@use "./components/contacto";
-@use "./components/acordeon";
+// BASE
+@use "./partial/base/reset.scss"
+@use "./partial/base/fonts"
+
+// COMPONENTS
+@use "./partial/components/nabvar";
+@use "./partial/components/general";
+@use "./partial/components/footer";
+@use "./partial/components/contacto";
+@use "./partial/components/acordeon";
+
