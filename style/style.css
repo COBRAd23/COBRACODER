@@ -1,12 +1,11 @@
 @charset "UTF-8";
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
   margin: 0;
   padding: 0;
 }
 
+/* font-family: "Montserrat", sans-serif;*/
 /*Nabvar*/
 .navbar.bg-dark {
   background-color: #000000;
@@ -46,30 +45,24 @@ body {
   text-decoration: none;
 }
 
-/*FOOTER*/
-.footer {
-  border-top: 1px solid #000000;
-  font-size: 0.9rem;
-}
-
-.footer.bg-dark {
-  background-color: #000;
-}
-
-.footer a:hover {
-  color: #ffcc00;
-  transition: color 0.3s ease;
-}
-
-.footertop i {
-  margin-right: 5px;
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .section_one_inicio {
   font-size: small;
-  line-height: 1.2;
+  line-height: 0.5;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+h3 {
+  color: #ffcc00;
+  text-shadow: #000000;
 }
 
 @media (max-width: 768px) {
@@ -109,29 +102,18 @@ body {
 
 /*PORTFOLIO*/
 .imagenes-dobles {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 40px 20px;
-}
-
-.imagenes-dobles img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.imagenes-dobles {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* espacio entre elementos */
+  padding: 20px;
 }
 
 .imagen-link {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
   text-decoration: none;
+  position: relative;
 }
 
 .imagen-contenedor {
@@ -144,54 +126,37 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease;
-}
-
-.imagen-contenedor:hover .overlay {
-  opacity: 1;
-}
-
-.titulo {
   color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
   text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.contenedor-boton {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+.imagen-contenedor:hover img {
+  transform: scale(1.05);
 }
 
-.boton-arriba {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+@media (max-width: 992px) {
+  .imagen-link {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
 }
-
-.boton-arriba:hover {
-  background-color: #333;
+@media (max-width: 576px) {
+  .imagen-link {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
-
 /*FILOSOFIA*/
 .filosofia {
   background-color: #000;
@@ -228,7 +193,7 @@ body {
   right: 0;
   bottom: 0;
   background: url(../imagenes/filo.jpg) no-repeat center center/cover;
-  opacity: 0.1; /* ajusta transparencia */
+  opacity: 0.1;
   z-index: 0;
 }
 
@@ -292,6 +257,81 @@ body {
 
 .imagen-overlay:hover img {
   filter: brightness(0.7);
+}
+
+/*FOOTER*/
+.footer {
+  border-top: 3px solid #cfbb05;
+  background-color: #e6c407;
+  font-size: 0.9rem;
+}
+
+/*.footer.bg-dark {
+  background-color: #e6c407;
+}*/
+.footer a:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+.footertop i {
+  margin-right: 5px;
+}
+
+/*CONTACTO*/
+.formulario-contacto {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.formulario-contacto button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #e0e0e0;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /*acordeón */
@@ -403,62 +443,6 @@ body {
 .accordion-body {
   padding-left: 6rem;
   padding-right: 6rem;
-}
-
-/*CONTACTO*/
-.formulario-contacto {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.formulario-contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.formulario-contacto label {
-  font-weight: bold;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  outline: none;
-  border-color: #fff;
-}
-
-.formulario-contacto button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.formulario-contacto button:hover {
-  background-color: #e0e0e0;
-}
-
-.img-full {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
