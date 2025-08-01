@@ -58,6 +58,11 @@ body {
   line-height: 1;
   padding-left: 100px;
   padding-right: 100px;
+  background-image: url("assets/imagenes/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #000000;
 }
 
 h3 {
