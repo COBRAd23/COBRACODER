@@ -1,11 +1,18 @@
+// VARIABLES Y CONFIGURACIÓN BASE
+@use "./partial/utilitis/variables" as *;
+@use "./partial/utilitis/mixins" as *;
+
 // BASE
-@use "./partial/base/reset.scss";
+@use "./partial/base/reset";
 @use "./partial/base/fonts";
 
 // COMPONENTS
-@use "./partial/components/nabvar";
+@use "./partial/components/navbar";
 @use "./partial/components/general";
 @use "./partial/components/footer";
 @use "./partial/components/contacto";
 @use "./partial/components/acordeon";
+@use "./partial/components/portfolio";
+@use "./partial/components/filosofia";
+@use "./partial/components/servicios";
 

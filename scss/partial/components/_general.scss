@@ -19,7 +19,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  }
+}
 
 @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
   transition: $property $duration $timing;
@@ -27,11 +27,11 @@
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
-    @media (max-width: 768px) { @content; }
+    @media (max-width: $breakpoint-mobile) { @content; }
   } @else if $breakpoint == tablet {
-    @media (max-width: 992px) { @content; }
+    @media (max-width: $breakpoint-tablet) { @content; }
   } @else if $breakpoint == desktop {
-    @media (min-width: 993px) { @content; }
+    @media (min-width: $breakpoint-desktop) { @content; }
   }
 }
 
@@ -42,6 +42,7 @@ body {
   color: $text-light;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 // Navbar
@@ -89,39 +90,53 @@ body {
   }
 }
 
-// Sección principal - SOLUCIÓN AL PROBLEMA
+// Sección principal - CORREGIDA
 .section_one_inicio {
   font-size: small;
-  line-height: 1;
-  padding: {
-    left: 100px;
-    right: 100px;
-    top: 2.5rem;
-    bottom: 2.5rem;
-  }
+  line-height: 1.6;
+  padding: $spacing-xl $spacing-lg;
   @include flex-column-center;
   text-align: center;
   color: $text-light;
-  @include background-image("assets/imagenes/fondo.jpg");
+  @include background-image($background-image);
   border-bottom: 1px solid $border-color;
-  min-height: 100vh; // Asegura que ocupe toda la altura de la ventana
+  min-height: 100vh;
+  position: relative;
 
-  @include responsive(mobile) {
-    padding: {
-      left: 1rem;
-      right: 1rem;
-    }
+  // Overlay para mejorar legibilidad
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  // Contenido sobre el overlay
+  > * {
+    position: relative;
+    z-index: 2;
   }
 
   h3 {
     color: $secondary-color;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    margin-bottom: 1rem;
+    @include text-shadow(2px, 2px, 4px);
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-bold;
   }
 
   p {
-    margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: $spacing-xs;
+    @include text-shadow(1px, 1px, 2px);
+    font-weight: $font-weight-medium;
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-md $spacing-sm;
+    min-height: 80vh;
   }
 }
 
@@ -130,7 +145,8 @@ body {
   max-width: 600px;
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: $spacing-md;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 
   @include responsive(mobile) {
     max-width: 300px;
@@ -139,27 +155,37 @@ body {
 
 // Sección de servicios
 .section_two_inicio {
-  padding: 4rem 2rem;
+  padding: $spacing-lg $spacing-md;
   background-color: $text-light;
   text-align: center;
   color: $text-dark;
 
   h1 {
-    margin-bottom: 3rem;
-    font-weight: 700;
-           }
+    margin-bottom: $spacing-lg;
+    font-weight: $font-weight-bold;
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
 
   .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    @include transition(transform, box-shadow);
+    border: none;
+    @include box-shadow;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      @include box-shadow(0, 10px, 25px, rgba(0, 0, 0, 0.2));
     }
 
     .card-title {
-      font-weight: 600;
+      font-weight: $font-weight-semibold;
       color: $text-dark;
+      margin-bottom: $spacing-sm;
+    }
+
+    .card-text {
+      color: $text-muted;
+      margin-bottom: $spacing-md;
     }
 
     .btn-dark {
@@ -172,5 +198,40 @@ body {
         border-color: lighten($primary-color, 20%);
       }
     }
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-md $spacing-sm;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Encabezados para otras páginas
+.h2style {
+  @include background-image($background-image);
+  color: $text-light;
+  padding: $spacing-sm;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-weight: $font-weight-bold;
   }
 }

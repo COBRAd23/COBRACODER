@@ -1,54 +1,73 @@
-/*CONTACTO*/
+// Contacto styles
 .formulario-contacto {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem;
+  background-color: $primary-color;
+  color: $text-light;
+  padding: $spacing-md;
   max-width: 600px;
   margin: 0 auto;
-}
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
-.formulario-contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
 
-.formulario-contacto label {
-  font-weight: bold;
-}
+  label {
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xs;
+    color: $text-light;
+  }
 
-.formulario-contacto input,
-.formulario-contacto textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: #000000;
-  color: #ffffff;
-}
+  input,
+  textarea {
+    padding: $spacing-sm;
+    border: 1px solid $text-gray;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: $text-light;
+    @include transition(border-color);
 
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  outline: none;
-  border-color: #fff;
-}
+    &:focus {
+      outline: none;
+      border-color: $secondary-color;
+      box-shadow: 0 0 0 2px rgba($secondary-color, 0.2);
+    }
 
-.formulario-contacto button {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
 
-.formulario-contacto button:hover {
-  background-color: #e0e0e0;
-}
-.img-full {
-  width: 100%;
-  height: auto;
-  display: block;
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  button {
+    background-color: $secondary-color;
+    color: $text-dark;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    cursor: pointer;
+    border-radius: 4px;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-sm;
+    margin: $spacing-sm;
+  }
 }

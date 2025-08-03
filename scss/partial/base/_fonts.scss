@@ -1,2 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
-/* font-family: "Montserrat", sans-serif;*/
+// Importación de fuentes
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Configuración de fuentes
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.navbar-brand {
+  font-weight: $font-weight-bold;
+}
