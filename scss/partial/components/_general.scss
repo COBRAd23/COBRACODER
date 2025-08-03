@@ -1,222 +1,176 @@
+@charset "UTF-8";
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 992px) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 993px) { @content; }
+  }
+}
+
+// Body
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  font-family: $font-family;
+  background-color: $primary-color;
+  color: $text-light;
   margin: 0;
   padding: 0;
 }
 
+// Navbar
+.navbar {
+  &.bg-dark {
+    background-color: $primary-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .navbar-brand {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $text-light;
+  }
+
+  .navbar-dark .navbar-nav {
+    .nav-link {
+      color: $text-gray;
+      padding: 0.5rem 1rem;
+      @include transition(color);
+
+      &:hover {
+        color: #8d8d8b;
+      }
+    }
+  }
+
+  // Redes sociales
+  .redes {
+    i {
+      color: $text-gray;
+      margin-left: 10px;
+      font-size: 1.2rem;
+      @include transition(color);
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+// Sección principal - SOLUCIÓN AL PROBLEMA
 .section_one_inicio {
   font-size: small;
   line-height: 1;
-  padding-left: 100px;
-  padding-right: 100px;
-
-  background-image: url(../assets/imagenes/fondo.jpg); /* ajustá la ruta si es necesario */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  min-height: 100vh; /* Esto hace que la sección tenga alto mínimo de pantalla completa */
-}
-
-
-h3 {
-  color: #ffcc00;
-  text-shadow: #000000;
-}
-
-@media (max-width: 768px) {
-  .section_one_inicio {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: {
+    left: 100px;
+    right: 100px;
+    top: 2.5rem;
+    bottom: 2.5rem;
   }
-}
-.logo-cobra {
-  max-width: 600px; 
-  width: 100%;      
-  height: auto;     
-}
-
-@media (max-width: 768px) {
-  .logo-cobra {
-    max-width: 300px; 
-  }
-}
-
-.section_two_inicio {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+  @include flex-column-center;
   text-align: center;
-  color: #000000;
+  color: $text-light;
+  @include background-image("assets/imagenes/fondo.jpg");
+  border-bottom: 1px solid $border-color;
+  min-height: 100vh; // Asegura que ocupe toda la altura de la ventana
+
+  @include responsive(mobile) {
+    padding: {
+      left: 1rem;
+      right: 1rem;
+    }
+  }
+
+  h3 {
+    color: $secondary-color;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
 }
 
-/*ENCABEZADOS HTMLS*/
-.h2style {
-  background-image: url(../assets/imagenes/fondo.jpg); 
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;   
-  color: white;                   
-  padding: 10px 10px;            
-  text-align: center;             
-}
-
-/*PORTFOLIO*/
-.imagenes-dobles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* espacio entre elementos */
-  padding: 20px;
-}
-
-.imagen-link {
-  flex: 1 1 calc(50% - 20px); 
-  max-width: calc(50% - 20px);
-  text-decoration: none;
-  position: relative;
-}
-
-.imagen-contenedor {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.imagen-contenedor img {
+// Logo
+.logo-cobra {
+  max-width: 600px;
   width: 100%;
   height: auto;
-  display: block;
-  transition: transform 0.3s ease;
+  margin-bottom: 2rem;
+
+  @include responsive(mobile) {
+    max-width: 300px;
+  }
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  color: white;
+// Sección de servicios
+.section_two_inicio {
+  padding: 4rem 2rem;
+  background-color: $text-light;
   text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
+  color: $text-dark;
 
-.imagen-contenedor:hover img {
-  transform: scale(1.05);
-}
+  h1 {
+    margin-bottom: 3rem;
+    font-weight: 700;
+           }
 
-@media (max-width: 992px) {
-  .imagen-link {
-    flex: 1 1 calc(50% - 20px); 
-    max-width: calc(50% - 20px);
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: $text-dark;
+    }
+
+    .btn-dark {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: lighten($primary-color, 20%);
+        border-color: lighten($primary-color, 20%);
+      }
+    }
   }
-}
-
-@media (max-width: 576px) {
-  .imagen-link {
-    flex: 1 1 100%; 
-    max-width: 100%;
-  }
-}
-
-
-/*FILOSOFIA*/
-.filosofia {
-  background-color: #000; 
-  color: #fff;
-  padding: 60px 20px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: left;
-  display: flex;
-  justify-content: center;
-}
-
-.filosofia .contenido {
-  max-width: 650px;
-  width: 100%;
-  line-height: 1.8;
-}
-
-.filosofia p {
-  margin-bottom: 20px;
-}
-
-.filosofia {
-  position: relative;
-  padding: 60px 40px;
-  color: #fff; 
-  overflow: hidden;
-}
-
-.filosofia::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url(../imagenes/filo.jpg) no-repeat center center/cover;
-  opacity: 0.1; 
-  z-index: 0;
-}
-
-.filosofia .contenido {
-  position: relative;
-  z-index: 1;
-}
-
-/*SERVICIOS*/
-.alturasection {
-  padding: 4rem;
-}
-
-.row img {
-  max-width: 100%; 
-  height: auto;   
-  display: block; 
-  margin: 0 auto 1rem auto; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-}
-
-.col h5 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.col ul {
-  padding-left: 1rem;
-  text-align: left;
-  list-style-type: disc;
-}
-
-.imagen-overlay {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.imagen-overlay img {
-  width: 100%;
-  display: block;
-  transition: 0.3s ease;
-}
-
-.imagen-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #ffcc00; 
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
-
-.imagen-overlay:hover::after {
-  opacity: 1;
-}
-
-.imagen-overlay:hover img {
-  filter: brightness(0.7);
 }
