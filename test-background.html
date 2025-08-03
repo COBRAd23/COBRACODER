@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .test-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        /* Prueba 1: Ruta relativa desde CSS */
+        .test1 {
+            background-image: url("../../assets/imagenes/fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Prueba 2: Ruta absoluta */
+        .test2 {
+            background-image: url("/assets/imagenes/fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Prueba 3: Ruta desde raíz del proyecto */
+        .test3 {
+            background-image: url("./assets/imagenes/fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Prueba 4: Ruta directa */
+        .test4 {
+            background-image: url("assets/imagenes/fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .error {
+            background-color: #ff0000 !important;
+        }
+        
+        .success {
+            background-color: #00ff00 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-section test1">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Prueba 1: Ruta relativa desde CSS</h1>
+            <p>Ruta: ../../assets/imagenes/fondo.jpg</p>
+        </div>
+    </div>
+    
+    <div class="test-section test2">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Prueba 2: Ruta absoluta</h1>
+            <p>Ruta: /assets/imagenes/fondo.jpg</p>
+        </div>
+    </div>
+    
+    <div class="test-section test3">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Prueba 3: Ruta desde raíz</h1>
+            <p>Ruta: ./assets/imagenes/fondo.jpg</p>
+        </div>
+    </div>
+    
+    <div class="test-section test4">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Prueba 4: Ruta directa</h1>
+            <p>Ruta: assets/imagenes/fondo.jpg</p>
+        </div>
+    </div>
+    
+    <script>
+        // Función para verificar si la imagen se cargó
+        function checkImage(url, element) {
+            const img = new Image();
+            img.onload = function() {
+                element.classList.add('success');
+                console.log('✅ Imagen cargada:', url);
+            };
+            img.onerror = function() {
+                element.classList.add('error');
+                console.log('❌ Error cargando imagen:', url);
+            };
+            img.src = url;
+        }
+        
+        // Verificar todas las rutas
+        window.addEventListener('load', function() {
+            const tests = [
+                { url: '../../assets/imagenes/fondo.jpg', element: document.querySelector('.test1') },
+                { url: '/assets/imagenes/fondo.jpg', element: document.querySelector('.test2') },
+                { url: './assets/imagenes/fondo.jpg', element: document.querySelector('.test3') },
+                { url: 'assets/imagenes/fondo.jpg', element: document.querySelector('.test4') }
+            ];
+            
+            tests.forEach(test => {
+                checkImage(test.url, test.element);
+            });
+        });
+    </script>
+</body>
+</html> 
