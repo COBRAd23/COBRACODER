@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section_two_inicio .card .card-text {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 2rem;
 }
 
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
   position: relative;
 }
@@ -634,14 +634,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #000000;
+  color: #ffcc00;
 }
 
 .alturasection .row .col ul {
   padding-left: 1rem;
   text-align: left;
   list-style-type: disc;
-  color: #000000;
+  color: #ffffff;
 }
 
 .alturasection .row .col ul li {
