@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--aos-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!--bootstrap-min.ccs-->
+    <!--bootstrap-min.css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!--ccs-->
+    <!--css-->
     <link rel="stylesheet" href="./style/style.css"/>
     <title>COBRA</title>
 </head>
@@ -20,7 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">Cobra Design</a>
+        <a class="navbar-brand gradient-text" href="#">Cobra Design</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,10 +32,10 @@
             <li class="nav-item"><a class="nav-link" href="./pages/portfolio.html">Portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
             <li class="nav-item d-flex align-items-center redes">
-              <a class="nav-link p-2" href="https://instagram.com/cobra_design_studio" target="_blank">
+              <a class="nav-link p-2" href="https://instagram.com/cobra_design_studio" target="_blank" rel="noopener">
               <i class="fab fa-instagram"></i>
               </a>
-              <a class="nav-link p-2" href="https://behance.net/agustinglartigue" target="_blank">
+              <a class="nav-link p-2" href="https://behance.net/agustinglartigue" target="_blank" rel="noopener">
               <i class="fab fa-behance"></i>
               </a>
             </li>
@@ -46,21 +46,21 @@
   </header>
 
   <main>
-    <section class="section_one_inicio d-flex flex-column align-items-center justify-content-center text-center text-white">
-      <img src="assets/imagenes/logocobra.png" alt="cobra" class="img-fluid mb-4 logo-cobra animate__animated animate__backInDown">
+    <section class="section_one_inicio d-flex flex-column align-items-center justify-content-center text-center text-white parallax-bg">
+      <img src="assets/imagenes/logocobra.png" alt="cobra" class="img-fluid mb-4 logo-cobra animate__animated animate__backInDown float">
     
-      <h3>Bienvenidos</h3>
-      <p>En Cobra Design, nos apasiona la creatividad y la innovación.</p> 
-      <p>Nos comprometemos a brindar servicios de alta calidad que</p> 
-      <p>superen las expectativas de nuestros clientes.</p>
+      <h3 class="typing-effect">Bienvenidos</h3>
+      <p class="fade-in-up" style="animation-delay: 0.5s;">En Cobra Design, nos apasiona la creatividad y la innovación.</p> 
+      <p class="fade-in-up" style="animation-delay: 0.7s;">Nos comprometemos a brindar servicios de alta calidad que</p> 
+      <p class="fade-in-up" style="animation-delay: 0.9s;">superen las expectativas de nuestros clientes.</p>
     </section>
 
     <!-- Sección: Servicios -->
     <section class="section_two_inicio">
-      <h1>SERVICIOS</h1>
+      <h1 data-aos="fade-up" data-aos-duration="800">SERVICIOS</h1>
 
     <div class="d-flex flex-wrap gap-3 justify-content-center">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="100">
         <img src="./assets/carrusel/car04.jpg" class="card-img-top" alt="Diseño Gráfico">
           <div class="card-body">
             <h5 class="card-title">DISEÑO GRAFICO</h5>
@@ -68,7 +68,7 @@
             <a href="./pages/servicios.html" class="btn btn-dark">Más info</a>
           </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="200">
         <img src="./assets/carrusel/car03.jpg" class="card-img-top" alt="Branding">
           <div class="card-body">
             <h5 class="card-title">BRANDING</h5>
@@ -76,7 +76,7 @@
             <a href="./pages/servicios.html" class="btn btn-dark">Más info</a>
           </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="300">
         <img src="./assets/carrusel/car013.jpg" class="card-img-top" alt="D.web">
           <div class="card-body">
             <h5 class="card-title">ADICIONALES</h5>
@@ -84,7 +84,7 @@
             <a href="./pages/servicios.html" class="btn btn-dark">Más info</a>
           </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;" data-aos="fade-up" data-aos-delay="400">
         <img src="./assets/carrusel/car010.jpg" class="card-img-top" alt="C.Management">
           <div class="card-body">
             <h5 class="card-title">MANAGEMENT</h5>
@@ -96,7 +96,7 @@
       
     </section>
 
-    <section>  
+    <section data-aos="zoom-in" data-aos-duration="1000">  
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -107,19 +107,19 @@
         <div class="carousel-item active">
             <img src="./assets/carrusel/car01.jpg" class="d-block w-100" alt="carrusel">
             <div class="carousel-caption d-none d-md-block">
-              <h5>MOCKUPS</h5>
+              <h5 class="pulse">MOCKUPS</h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="./assets/carrusel/car02.jpg" class="d-block w-100" alt="carrusel">
             <div class="carousel-caption d-none d-md-block">
-              <h5>PACKS</h5>
+              <h5 class="pulse">PACKS</h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="./assets/carrusel/car06.jpg" class="d-block w-100" alt="carrusel">
             <div class="carousel-caption d-none d-md-block">
-              <h5>BRANDING</h5>
+              <h5 class="pulse">BRANDING</h5>
             </div>
         </div>
       </div>
@@ -143,22 +143,61 @@
         <a href="#top" class="footertop text-light text-decoration-none">
           <i class="fas fa-arrow-up"></i> Subir
         </a>
-        <a href="https://instagram.com/cobra_design_studio" target="_blank" class="text-light">
+        <a href="https://instagram.com/cobra_design_studio" target="_blank" rel="noopener" class="text-light">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://behance.net/agustinglartigue" target="_blank" class="text-light">
+        <a href="https://behance.net/agustinglartigue" target="_blank" rel="noopener" class="text-light">
           <i class="fab fa-behance"></i>
         </a>
       </div>
     </div>
   </footer>
 
-    <!--aosjv-->
+    <!--aos-js-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
     </script>
-    <!--bootstrap-JS-->
+    <!--bootstrap-js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>   
+    
+    <!-- Custom animations script -->
+    <script>
+      // Intersection Observer para animaciones personalizadas
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, observerOptions);
+      
+      // Observar elementos con animaciones personalizadas
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-left, .scale-in');
+        animatedElements.forEach(el => {
+          observer.observe(el);
+        });
+      });
+      
+      // Smooth scroll para el botón "Subir"
+      document.querySelector('.footertop').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
 </body>
 </html>

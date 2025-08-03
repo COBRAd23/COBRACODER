@@ -46,10 +46,6 @@ input, textarea {
 }
 
 /* Configuración de fuentes */
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
@@ -127,15 +123,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Body */
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #000000;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+
 
 /* Sección principal - CORREGIDA */
 .section_one_inicio {
@@ -241,7 +229,7 @@ body {
 }
 
 .section_two_inicio .card .card-text {
-  color: #8d8d8b;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
@@ -701,5 +689,282 @@ body {
   }
 }
 
+/* Animaciones adicionales para mejorar la experiencia */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
 
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Animación de entrada para el logo */
+.logo-cobra {
+  animation: logoEntrance 1.5s ease-out;
+}
+
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Efectos hover mejorados para navbar */
+.navbar .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffcc00, #e6c407);
+  transition: left 0.3s ease;
+}
+
+.navbar .nav-link:hover::before {
+  left: 0;
+}
+
+/* Animación de carga para las imágenes */
+.card img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Efecto de partículas flotantes */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 204, 0, 0.6);
+  border-radius: 50%;
+  animation: float-particle 6s infinite linear;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Animación de texto con efecto de escritura */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #ffcc00;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffcc00; }
+}
+
+/* Efecto de ondas para botones */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Animación de scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Efecto de glassmorphism para cards */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+/* Animación de rotación 3D */
+.rotate-3d {
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.rotate-3d:hover {
+  -webkit-transform: rotateY(10deg) rotateX(5deg);
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+/* Efecto de neón */
+.neon-glow {
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+  animation: neon-pulse 2s infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+  }
+  50% {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+  }
+}
+
+/* Animación de carga para el sitio */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top: 3px solid #ffcc00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/* Efecto de parallax mejorado */
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Animación de entrada escalonada */
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: staggerFadeIn 0.6s ease forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de hover para redes sociales */
+.redes a {
+  transition: all 0.3s ease;
+}
+
+.redes a:hover {
+  -webkit-transform: translateY(-3px) scale(1.1);
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 5px 15px rgba(255, 204, 0, 0.5));
+}
+
+/* Animación de texto con gradiente */
+.gradient-text-animated {
+  background: linear-gradient(45deg, #ffcc00, #e6c407, #ffcc00);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
