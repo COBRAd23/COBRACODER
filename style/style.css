@@ -19,7 +19,7 @@ body {
   background-color: #000000;
 }
 
-/* Reset de elementos específicos */
+/* Reset */
 img {
   max-width: 100%;
   height: auto;
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Sección principal - CORREGIDA */
+/* Sección principal */
 .section_one_inicio {
   font-size: small;
   line-height: 1.6;
@@ -286,10 +286,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer styles */
 .footer {
-  border-top: 3px solid #e6c407;
-  background-color: #e6c407;
+  border-top: 3px solid #ffcc00;
+  background-color: #000000;
   font-size: 0.9rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 .footer .container .d-flex p {
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .container .d-flex .d-flex .footertop {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .container .d-flex .d-flex a {
-  color: #000000;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
@@ -724,7 +724,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Efectos hover mejorados para navbar */
+/* Efectos hover para navbar */
 .navbar .nav-link {
   position: relative;
   overflow: hidden;
@@ -967,4 +967,3 @@ html {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
