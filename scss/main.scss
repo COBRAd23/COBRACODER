@@ -3,8 +3,8 @@
 @use "./partial/utilitis/mixins" as *;
 
 // BASE
-@use "./partial/base/reset";
-@use "./partial/base/fonts";
+@use "./partial/base/reset" as *;
+@use "./partial/base/fonts" as *;
 
 // COMPONENTS
 @use "./partial/components/navbar";
