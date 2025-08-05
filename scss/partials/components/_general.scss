@@ -134,7 +134,7 @@ body {
 .h2style {
   @include background-image($background-image);
   color: $text-light;
-  padding: $spacing-sm;
+  padding: $spacing-xl;
   text-align: center;
   position: relative;
 
