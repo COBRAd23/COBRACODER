@@ -1,17 +1,20 @@
 // BASE
-@use "./partials/base/fonts";
-@use "./partials/base/resets";
+@use "./partials/base/fonts" as *;
+@use "./partials/base/resets" as *;
 
 // COMPONENTS
-@use "./partial/components/navbar";
-@use "./partial/components/general";
-@use "./partial/components/footer";
-@use "./partial/components/contacto";
-@use "./partial/components/acordeon";
-@use "./partial/components/portfolio";
-@use "./partial/components/filosofia";
-@use "./partial/components/servicios";
+@use "./partials/components/navbar" as *;
+@use "./partials/components/general" as *;
+@use "./partials/components/footer" as *;
+@use "./partials/components/contacto" as *;
+@use "./partials/components/acordeon" as *;
+@use "./partials/components/portfolio" as *;
+@use "./partials/components/filosofia" as *;
+@use "./partials/components/servicios" as *;
 
 // UTILITIS
-@use "./partial/utilitis/variables" as *;
-@use "./partial/utilitis/mixins" as *;
+@use "./partials/utilities/variables" as *;
+@use "./partials/utilities/mixins" as *;
+
+
+
