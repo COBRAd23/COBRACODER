@@ -1,0 +1,155 @@
+// Body
+body {
+  font-family: $font-family;
+  background-color: $primary-color;
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+// Sección principal
+.section_one_inicio {
+  font-size: small;
+  line-height: 1.6;
+  padding: $spacing-xl $spacing-lg;
+  @include flex-column-center;
+  text-align: center;
+  color: $text-light;
+  @include background-image($background-image);
+  border-bottom: 1px solid $border-color;
+  min-height: 100vh;
+  position: relative;
+
+  // Overlay para mejorar legibilidad
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  // Contenido sobre el overlay
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  h3 {
+    color: $secondary-color;
+    @include text-shadow(2px, 2px, 4px);
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    margin-bottom: $spacing-xs;
+    @include text-shadow(1px, 1px, 2px);
+    font-weight: $font-weight-medium;
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-md $spacing-sm;
+    min-height: 80vh;
+  }
+}
+
+// Logo
+.logo-cobra {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-bottom: $spacing-md;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+
+  @include responsive(mobile) {
+    max-width: 300px;
+  }
+}
+
+// Sección de servicios
+.section_two_inicio {
+  padding: $spacing-lg $spacing-md;
+  background-color: $text-light;
+  text-align: center;
+  color: $text-dark;
+
+  h1 {
+    margin-bottom: $spacing-lg;
+    font-weight: $font-weight-bold;
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+
+  .card {
+    @include transition(transform, box-shadow);
+    border: none;
+    @include box-shadow;
+
+    &:hover {
+      transform: translateY(-5px);
+      @include box-shadow(0, 10px, 25px, rgba(0, 0, 0, 0.2));
+    }
+
+    .card-title {
+      font-weight: $font-weight-semibold;
+      color: $text-dark;
+      margin-bottom: $spacing-sm;
+    }
+
+    .card-text {
+      color: $text-muted;
+      margin-bottom: $spacing-md;
+    }
+
+    .btn-dark {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: lighten($primary-color, 20%);
+        border-color: lighten($primary-color, 20%);
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-md $spacing-sm;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Encabezados para otras páginas
+.h2style {
+  @include background-image($background-image);
+  color: $text-light;
+  padding: $spacing-sm;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-weight: $font-weight-bold;
+  }
+}

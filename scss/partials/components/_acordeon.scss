@@ -1,0 +1,68 @@
+// Acordeón styles
+.accordion-item {
+  background-color: $primary-color;
+  border: 1px solid $border-light;
+  color: $text-light;
+  @include transition(all);
+
+  .accordion-button {
+    background-color: $primary-color;
+    color: $text-light;
+    border: none;
+    box-shadow: none;
+    padding: $spacing-md $spacing-xl;
+    @include transition(all);
+
+    &:focus {
+      box-shadow: none;
+      border-color: $secondary-color;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $text-dark;
+    }
+
+    &:not(.collapsed) {
+      background-color: $text-light;
+      color: $text-dark;
+      box-shadow: none;
+    }
+
+    h6 {
+      margin: 0;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      @include transition(color);
+    }
+
+    &.collapsed h6 {
+      color: inherit;
+    }
+
+    &:hover h6 {
+      color: $text-dark;
+    }
+  }
+
+  .accordion-collapse {
+    background-color: $text-light;
+    color: $text-dark;
+
+    .accordion-body {
+      padding: $spacing-md $spacing-xl;
+      background-color: $text-light;
+      color: $text-dark;
+    }
+  }
+
+  @include responsive(mobile) {
+    .accordion-button {
+      padding: $spacing-sm $spacing-md;
+    }
+
+    .accordion-body {
+      padding: $spacing-sm $spacing-md;
+    }
+  }
+}

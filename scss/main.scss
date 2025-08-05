@@ -1,0 +1,17 @@
+// BASE
+@use "./partials/base/fonts";
+@use "./partials/base/resets";
+
+// COMPONENTS
+@use "./partial/components/navbar";
+@use "./partial/components/general";
+@use "./partial/components/footer";
+@use "./partial/components/contacto";
+@use "./partial/components/acordeon";
+@use "./partial/components/portfolio";
+@use "./partial/components/filosofia";
+@use "./partial/components/servicios";
+
+// UTILITIS
+@use "./partial/utilitis/variables" as *;
+@use "./partial/utilitis/mixins" as *;

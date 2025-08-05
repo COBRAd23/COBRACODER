@@ -1,0 +1,72 @@
+.formulario-contacto {
+  background-color: $primary-color;
+  color: $text-light;
+  padding: $spacing-md;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  label {
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xs;
+    color: $text-light;
+  }
+
+  input,
+  textarea {
+    padding: $spacing-sm;
+    border: 1px solid $text-gray;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: $text-light;
+    @include transition(border-color);
+
+    &:focus {
+      outline: none;
+      border-color: $secondary-color;
+      box-shadow: 0 0 0 2px rgba($secondary-color, 0.2);
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  button {
+    background-color: $secondary-color;
+    color: $text-dark;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    cursor: pointer;
+    border-radius: 4px;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-sm;
+    margin: $spacing-sm;
+  }
+}
