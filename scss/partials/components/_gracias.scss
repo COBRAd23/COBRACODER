@@ -4,7 +4,7 @@
 .display-4 {
     .fw-bold {
         .text-success {
-            color: $text-light;
+            color: $text-light !important;
         }
     }
 }
@@ -12,8 +12,8 @@
 .btn {
     .btn-primary {
         .mt-4 {
-        background-color: $secondary-color;
-        text-decoration-color: $primary-color;
+        background-color: $secondary-color !important;
+        text-decoration-color: $primary-color !important;
         }
     }
 }

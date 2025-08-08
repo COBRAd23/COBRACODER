@@ -561,12 +561,12 @@ body {
 }
 
 .display-4 .fw-bold .text-success {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .btn .btn-primary .mt-4 {
-  background-color: #ffcc00;
-  text-decoration-color: #000000;
+  background-color: #ffcc00 !important;
+  text-decoration-color: #000000 !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
