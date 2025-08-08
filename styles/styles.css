@@ -560,22 +560,13 @@ body {
   }
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #000000;
+.display-4 .fw-bold .text-success {
   color: #ffffff;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-h1 {
-  color: #ffcc00;
 }
 
 .btn .btn-primary .mt-4 {
   background-color: #ffcc00;
-  color: #000000;
+  text-decoration-color: #000000;
 }
 
 /*# sourceMappingURL=styles.css.map */
