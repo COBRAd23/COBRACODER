@@ -26,14 +26,14 @@
         margin-bottom: $spacing-sm;
         font-weight: $font-weight-semibold;
         font-size: 1.2rem;
-        color: $text-dark;
+        color: $accent-color;
       }
 
       ul {
         padding-left: $spacing-sm;
         text-align: left;
         list-style-type: disc;
-        color: $text-dark;
+        color: $text-light;
 
         li {
           margin-bottom: $spacing-xs;

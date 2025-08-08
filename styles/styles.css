@@ -31,7 +31,7 @@ input, textarea {
 }
 
 .navbar.bg-dark {
-  background-color: #000000;
+  background-color: #000000 !important;
   border-bottom: 1px solid #000000;
 }
 .navbar .navbar-brand {
@@ -221,7 +221,7 @@ body {
 
 .footer {
   border-top: 3px solid #e6c407;
-  background-color: #000000;
+  background-color: #000000 !important;
   font-size: 0.9rem;
   color: #000000;
 }
@@ -514,13 +514,13 @@ body {
   margin-bottom: 1rem;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #000000;
+  color: #e6c407;
 }
 .alturasection .row .col ul {
   padding-left: 1rem;
   text-align: left;
   list-style-type: disc;
-  color: #000000;
+  color: #ffffff;
 }
 .alturasection .row .col ul li {
   margin-bottom: 0.5rem;

@@ -3,7 +3,7 @@
 // Navbar
 .navbar {
   &.bg-dark {
-    background-color: $primary-color;
+    background-color: $primary-color !important;
     border-bottom: 1px solid $border-color;
   }
 
