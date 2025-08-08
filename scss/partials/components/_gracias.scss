@@ -1,0 +1,22 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Body
+body {
+  font-family: $font-family;
+  background-color: $primary-color;
+  color: $text-light;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+    color: $secondary-color;
+
+}
+
+.btn .btn-primary .mt-4 {
+  background-color: $secondary-color;
+  color: $text-dark;
+}
