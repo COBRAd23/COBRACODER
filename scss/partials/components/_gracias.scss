@@ -1,8 +1,12 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
-.display-4 .fw-bold .text-success {
-    color: $text-light;
+.display-4 {
+    .fw-bold {
+        .text-success {
+            color: $text-light;
+        }
+    }
 }
 
 .btn {
