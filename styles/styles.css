@@ -131,16 +131,16 @@ body {
   }
 }
 
-.logo-cobra {
-  max-width: 600px;
+.logo-a {
+  max-width: 100px;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 @media (max-width: 768px) {
-  .logo-cobra {
-    max-width: 300px;
+  .logo-a {
+    max-width: 50px;
   }
 }
 
@@ -193,7 +193,7 @@ body {
 }
 
 .h2style {
-  background-image: url("../assets/imagenes/fondo.jpg");
+  background-image: url("../assets/imagenes/yofondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -560,7 +560,7 @@ body {
   }
 }
 
-.display-4 .fw-bold .text-success {
+.h1 .display-4 .fw-bold .text-success {
   color: #ffffff !important;
 }
 

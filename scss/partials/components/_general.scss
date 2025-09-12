@@ -63,7 +63,7 @@ body {
 
 // Logo
 .logo-a {
-  max-width: 100px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   margin-bottom: $spacing-md;
@@ -132,7 +132,6 @@ body {
 
 // Encabezados para otras páginas
 .h2style {
-  @include background-image($background-image);
   color: $text-light;
   padding: $spacing-xl;
   text-align: center;
