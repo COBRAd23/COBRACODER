@@ -80,16 +80,18 @@
 
     .container {
       .row {
-        flex-direction: column;
+        flex-direction: column !important;
         
         .col {
-          margin-bottom: $spacing-lg;
-          max-width: calc(100% - 2rem);
-          margin-left: auto;
-          margin-right: auto;
+          margin-bottom: $spacing-lg !important;
+          max-width: calc(100% - 2rem) !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          flex: none !important;
+          width: 100% !important;
           
           &:last-child {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
           }
         }
       }

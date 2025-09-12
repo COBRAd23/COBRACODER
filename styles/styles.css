@@ -357,9 +357,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 0 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
   .accordion {
-    margin: 0 1rem;
-    max-width: calc(100% - 2rem);
+    margin: 0 !important;
+    max-width: calc(100% - 2rem) !important;
+    width: calc(100% - 2rem) !important;
+    padding: 0 !important;
   }
 }
 
@@ -412,18 +420,27 @@ body {
   color: #000000;
 }
 @media (max-width: 768px) {
+  .accordion-item {
+    margin: 0 !important;
+    max-width: calc(100% - 2rem) !important;
+    width: calc(100% - 2rem) !important;
+  }
   .accordion-item .accordion-button {
-    padding: 1rem 2rem;
-    font-size: 0.9rem;
+    padding: 1rem 2rem !important;
+    font-size: 0.9rem !important;
+    width: 100% !important;
   }
   .accordion-item .accordion-body {
-    padding: 1rem 2rem;
-    max-width: calc(100% - 2rem);
-    margin: 0 auto;
+    padding: 1rem 2rem !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100% !important;
   }
   .accordion-item .accordion-body p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
   }
 }
 
@@ -615,16 +632,18 @@ body {
     padding: 2rem 1rem;
   }
   .alturasection .container .row {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .alturasection .container .row .col {
-    margin-bottom: 4rem;
-    max-width: calc(100% - 2rem);
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 4rem !important;
+    max-width: calc(100% - 2rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex: none !important;
+    width: 100% !important;
   }
   .alturasection .container .row .col:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 
