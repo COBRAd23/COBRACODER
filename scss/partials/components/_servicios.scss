@@ -78,21 +78,17 @@
   @include responsive(mobile) {
     padding: $spacing-md $spacing-sm;
 
-    .container {
-      .row {
-        flex-direction: column !important;
+    .row {
+      flex-direction: column;
+      
+      .col {
+        margin-bottom: $spacing-lg;
+        max-width: calc(100% - 2rem);
+        margin-left: auto;
+        margin-right: auto;
         
-        .col {
-          margin-bottom: $spacing-lg !important;
-          max-width: calc(100% - 2rem) !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          flex: none !important;
-          width: 100% !important;
-          
-          &:last-child {
-            margin-bottom: 0 !important;
-          }
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

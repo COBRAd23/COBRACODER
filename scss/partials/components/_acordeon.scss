@@ -2,31 +2,6 @@
 @use "../utilities/mixins" as *;
 
 // Acordeón styles
-section {
-  @include responsive(mobile) {
-    padding: 0 $spacing-sm !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-}
-
-.accordion {
-  @include responsive(mobile) {
-    margin: 0 !important;
-    max-width: calc(100% - 2rem) !important;
-    width: calc(100% - 2rem) !important;
-    padding: 0 !important;
-  }
-}
-
-// Específico para el contenedor del acordeón en servicios
-section:has(.accordion) {
-  @include responsive(mobile) {
-    padding: 0 $spacing-sm !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-}
 
 .accordion-item {
   background-color: $primary-color;
@@ -86,28 +61,12 @@ section:has(.accordion) {
   }
 
   @include responsive(mobile) {
-    margin: 0 !important;
-    max-width: calc(100% - 2rem) !important;
-    width: calc(100% - 2rem) !important;
-    
     .accordion-button {
-      padding: $spacing-sm $spacing-md !important;
-      font-size: 0.9rem !important;
-      width: 100% !important;
+      padding: $spacing-sm $spacing-md;
     }
 
     .accordion-body {
-      padding: $spacing-sm $spacing-md !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      width: 100% !important;
-      
-      p {
-        line-height: 1.6 !important;
-        margin-bottom: $spacing-sm !important;
-        max-width: 100% !important;
-        padding: 0 $spacing-sm !important;
-      }
+      padding: $spacing-sm $spacing-md;
     }
   }
 }

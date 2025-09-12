@@ -356,31 +356,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 0 1rem !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .accordion {
-    margin: 0 !important;
-    max-width: calc(100% - 2rem) !important;
-    width: calc(100% - 2rem) !important;
-    padding: 0 !important;
-  }
-}
-
-@media (max-width: 768px) {
-  section:has(.accordion) {
-    padding: 0 1rem !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
-}
-
 .accordion-item {
   background-color: #000000;
   border: 1px solid #fff;
@@ -430,27 +405,11 @@ body {
   color: #000000;
 }
 @media (max-width: 768px) {
-  .accordion-item {
-    margin: 0 !important;
-    max-width: calc(100% - 2rem) !important;
-    width: calc(100% - 2rem) !important;
-  }
   .accordion-item .accordion-button {
-    padding: 1rem 2rem !important;
-    font-size: 0.9rem !important;
-    width: 100% !important;
+    padding: 1rem 2rem;
   }
   .accordion-item .accordion-body {
-    padding: 1rem 2rem !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  .accordion-item .accordion-body p {
-    line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
-    max-width: 100% !important;
-    padding: 0 1rem !important;
+    padding: 1rem 2rem;
   }
 }
 
@@ -641,19 +600,17 @@ body {
   .alturasection {
     padding: 2rem 1rem;
   }
-  .alturasection .container .row {
-    flex-direction: column !important;
+  .alturasection .row {
+    flex-direction: column;
   }
-  .alturasection .container .row .col {
-    margin-bottom: 4rem !important;
-    max-width: calc(100% - 2rem) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    flex: none !important;
-    width: 100% !important;
+  .alturasection .row .col {
+    margin-bottom: 4rem;
+    max-width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
   }
-  .alturasection .container .row .col:last-child {
-    margin-bottom: 0 !important;
+  .alturasection .row .col:last-child {
+    margin-bottom: 0;
   }
 }
 
