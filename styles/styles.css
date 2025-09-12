@@ -625,6 +625,7 @@ body {
 .servicios-detalle {
   padding: 0;
   background-color: #000000;
+  margin: 0 -15px;
 }
 .servicios-detalle .servicios-cards {
   display: flex;
@@ -633,14 +634,18 @@ body {
 }
 .servicios-detalle .servicio-card {
   background-color: #000000;
-  border: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: none;
+  border-right: none;
   border-radius: 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 .servicios-detalle .servicio-card:hover {
   background-color: #ffcc00;
-  border-color: #ffcc00;
+  border-top-color: #ffcc00;
+  border-bottom-color: #ffcc00;
   transform: translateY(-2px);
 }
 .servicios-detalle .servicio-card:hover .servicio-header {
@@ -649,7 +654,8 @@ body {
 }
 .servicios-detalle .servicio-card.expanded {
   background-color: #ffffff;
-  border-color: #ffcc00;
+  border-top-color: #ffcc00;
+  border-bottom-color: #ffcc00;
 }
 .servicios-detalle .servicio-card.expanded .servicio-header {
   background-color: #ffcc00;
@@ -700,6 +706,7 @@ body {
 @media (max-width: 768px) {
   .servicios-detalle {
     padding: 0;
+    margin: 0 -15px;
   }
   .servicios-detalle .servicio-header {
     padding: 2rem 4rem;
