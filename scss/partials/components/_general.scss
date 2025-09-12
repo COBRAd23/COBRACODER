@@ -74,6 +74,18 @@ body {
   }
 }
 
+// Logo nombre AGL
+.logo-agl {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto $spacing-xs;
+
+  @include responsive(mobile) {
+    max-width: 220px;
+  }
+}
+
 // Sección de servicios
 .section_two_inicio {
   padding: $spacing-lg $spacing-md;

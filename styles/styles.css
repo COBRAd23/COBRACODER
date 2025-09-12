@@ -11,6 +11,8 @@ img {
   display: block;
 }
 
+/* estilos movidos a SCSS: .logo-agl */
+
 a {
   text-decoration: none;
   color: inherit;
