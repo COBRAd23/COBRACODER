@@ -11,8 +11,6 @@ img {
   display: block;
 }
 
-/* estilos movidos a SCSS: .logo-agl */
-
 a {
   text-decoration: none;
   color: inherit;
@@ -142,7 +140,19 @@ body {
 }
 @media (max-width: 768px) {
   .logo-a {
-    max-width: 50px;
+    max-width: 10px;
+  }
+}
+
+.logo-agl {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.5rem;
+}
+@media (max-width: 768px) {
+  .logo-agl {
+    max-width: 220px;
   }
 }
 
