@@ -62,15 +62,15 @@ body {
 }
 
 // Logo
-.logo-cobra {
-  max-width: 600px;
+.logo-a {
+  max-width: 100px;
   width: 100%;
   height: auto;
   margin-bottom: $spacing-md;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 
   @include responsive(mobile) {
-    max-width: 300px;
+    max-width: 50px;
   }
 }
 
