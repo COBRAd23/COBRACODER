@@ -623,48 +623,58 @@ body {
 }
 
 .servicios-detalle {
-  padding: 4rem;
+  padding: 0;
   background-color: #000000;
 }
 .servicios-detalle .servicios-cards {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0;
 }
 .servicios-detalle .servicio-card {
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 .servicios-detalle .servicio-card:hover {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-.servicios-detalle .servicio-header {
+.servicios-detalle .servicio-card:hover .servicio-header {
   background-color: #ffcc00;
   color: #000000;
-  padding: 2rem 4rem;
+}
+.servicios-detalle .servicio-card.expanded {
+  background-color: #ffffff;
+  border-color: #ffcc00;
+}
+.servicios-detalle .servicio-card.expanded .servicio-header {
+  background-color: #ffcc00;
+  color: #000000;
+}
+.servicios-detalle .servicio-header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
-}
-.servicios-detalle .servicio-header:hover {
-  background-color: #e6c407;
+  border-bottom: 2px solid transparent;
 }
 .servicios-detalle .servicio-header h5 {
   margin: 0;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .servicios-detalle .servicio-header i {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: transform 0.3s ease;
 }
 .servicios-detalle .servicio-content {
@@ -672,11 +682,12 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  background-color: #ffffff;
 }
 .servicios-detalle .servicio-content strong {
   display: block;
-  padding: 2rem 4rem 1rem;
-  font-size: 1.1rem;
+  padding: 4rem 4rem 2rem;
+  font-size: 1.2rem;
   color: #000000;
   font-weight: 600;
 }
@@ -688,26 +699,24 @@ body {
 }
 @media (max-width: 768px) {
   .servicios-detalle {
-    padding: 2rem 1rem;
-  }
-  .servicios-detalle .servicios-cards {
-    gap: 1rem;
+    padding: 0;
   }
   .servicios-detalle .servicio-header {
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
   }
   .servicios-detalle .servicio-header h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
   }
   .servicios-detalle .servicio-header i {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .servicios-detalle .servicio-content strong {
-    padding: 1rem 2rem 0.5rem;
-    font-size: 1rem;
+    padding: 2rem 4rem 1rem;
+    font-size: 1.1rem;
   }
   .servicios-detalle .servicio-content p {
-    padding: 0 2rem 2rem;
+    padding: 0 4rem 4rem;
     line-height: 1.6;
   }
 }

@@ -3,53 +3,65 @@
 
 // Servicios Cards Expandibles
 .servicios-detalle {
-  padding: $spacing-lg;
+  padding: 0;
   background-color: $primary-color;
 
   .servicios-cards {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: 0;
   }
 
   .servicio-card {
-    background-color: $text-light;
-    border-radius: 10px;
+    background-color: $primary-color;
+    border: 2px solid $text-light;
+    border-radius: 0;
     overflow: hidden;
-    @include box-shadow;
     @include transition(all);
 
     &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
       transform: translateY(-2px);
-      @include box-shadow(0, 8px, 25px, rgba(0, 0, 0, 0.15));
+      
+      .servicio-header {
+        background-color: $secondary-color;
+        color: $text-dark;
+      }
+    }
+
+    &.expanded {
+      background-color: $text-light;
+      border-color: $secondary-color;
+      
+      .servicio-header {
+        background-color: $secondary-color;
+        color: $text-dark;
+      }
     }
   }
 
   .servicio-header {
-    background-color: $secondary-color;
-    color: $text-dark;
-    padding: $spacing-md $spacing-lg;
+    background-color: $primary-color;
+    color: $text-light;
+    padding: $spacing-lg;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @include transition(all);
-
-    &:hover {
-      background-color: $accent-color;
-    }
+    border-bottom: 2px solid transparent;
 
     h5 {
       margin: 0;
       font-weight: $font-weight-bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     i {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       @include transition(transform);
     }
   }
@@ -59,11 +71,12 @@
     max-height: 0;
     overflow: hidden;
     @include transition(max-height);
+    background-color: $text-light;
 
     strong {
       display: block;
-      padding: $spacing-md $spacing-lg $spacing-sm;
-      font-size: 1.1rem;
+      padding: $spacing-lg $spacing-lg $spacing-md;
+      font-size: 1.2rem;
       color: $primary-color;
       font-weight: $font-weight-semibold;
     }
@@ -77,32 +90,29 @@
   }
 
   @include responsive(mobile) {
-    padding: $spacing-md $spacing-sm;
-
-    .servicios-cards {
-      gap: $spacing-sm;
-    }
+    padding: 0;
 
     .servicio-header {
-      padding: $spacing-sm $spacing-md;
+      padding: $spacing-md $spacing-lg;
 
       h5 {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
       }
 
       i {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
 
     .servicio-content {
       strong {
-        padding: $spacing-sm $spacing-md $spacing-xs;
-        font-size: 1rem;
+        padding: $spacing-md $spacing-lg $spacing-sm;
+        font-size: 1.1rem;
       }
 
       p {
-        padding: 0 $spacing-md $spacing-md;
+        padding: 0 $spacing-lg $spacing-lg;
         line-height: 1.6;
       }
     }

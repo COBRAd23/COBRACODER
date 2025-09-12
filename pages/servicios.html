@@ -249,9 +249,11 @@
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
           icon.style.transform = 'rotate(0deg)';
+          card.classList.remove('expanded');
         } else {
           content.style.maxHeight = content.scrollHeight + 'px';
           icon.style.transform = 'rotate(180deg)';
+          card.classList.add('expanded');
         }
       }
     </script>
