@@ -622,6 +622,96 @@ body {
   }
 }
 
+.servicios-detalle {
+  padding: 4rem;
+  background-color: #000000;
+}
+.servicios-detalle .servicios-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.servicios-detalle .servicio-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.servicios-detalle .servicio-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.servicios-detalle .servicio-header {
+  background-color: #ffcc00;
+  color: #000000;
+  padding: 2rem 4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.servicios-detalle .servicio-header:hover {
+  background-color: #e6c407;
+}
+.servicios-detalle .servicio-header h5 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.servicios-detalle .servicio-header i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.servicios-detalle .servicio-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.servicios-detalle .servicio-content strong {
+  display: block;
+  padding: 2rem 4rem 1rem;
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 600;
+}
+.servicios-detalle .servicio-content p {
+  padding: 0 4rem 4rem;
+  line-height: 1.7;
+  color: #000000;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .servicios-detalle {
+    padding: 2rem 1rem;
+  }
+  .servicios-detalle .servicios-cards {
+    gap: 1rem;
+  }
+  .servicios-detalle .servicio-header {
+    padding: 1rem 2rem;
+  }
+  .servicios-detalle .servicio-header h5 {
+    font-size: 1rem;
+  }
+  .servicios-detalle .servicio-header i {
+    font-size: 1rem;
+  }
+  .servicios-detalle .servicio-content strong {
+    padding: 1rem 2rem 0.5rem;
+    font-size: 1rem;
+  }
+  .servicios-detalle .servicio-content p {
+    padding: 0 2rem 2rem;
+    line-height: 1.6;
+  }
+}
+
 .h1 .display-4 .fw-bold .text-success {
   color: #ffffff !important;
 }

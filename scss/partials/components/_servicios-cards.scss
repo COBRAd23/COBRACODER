@@ -1,0 +1,110 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Servicios Cards Expandibles
+.servicios-detalle {
+  padding: $spacing-lg;
+  background-color: $primary-color;
+
+  .servicios-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  .servicio-card {
+    background-color: $text-light;
+    border-radius: 10px;
+    overflow: hidden;
+    @include box-shadow;
+    @include transition(all);
+
+    &:hover {
+      transform: translateY(-2px);
+      @include box-shadow(0, 8px, 25px, rgba(0, 0, 0, 0.15));
+    }
+  }
+
+  .servicio-header {
+    background-color: $secondary-color;
+    color: $text-dark;
+    padding: $spacing-md $spacing-lg;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include transition(all);
+
+    &:hover {
+      background-color: $accent-color;
+    }
+
+    h5 {
+      margin: 0;
+      font-weight: $font-weight-bold;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    i {
+      font-size: 1.2rem;
+      @include transition(transform);
+    }
+  }
+
+  .servicio-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    @include transition(max-height);
+
+    strong {
+      display: block;
+      padding: $spacing-md $spacing-lg $spacing-sm;
+      font-size: 1.1rem;
+      color: $primary-color;
+      font-weight: $font-weight-semibold;
+    }
+
+    p {
+      padding: 0 $spacing-lg $spacing-lg;
+      line-height: 1.7;
+      color: $text-dark;
+      margin: 0;
+    }
+  }
+
+  @include responsive(mobile) {
+    padding: $spacing-md $spacing-sm;
+
+    .servicios-cards {
+      gap: $spacing-sm;
+    }
+
+    .servicio-header {
+      padding: $spacing-sm $spacing-md;
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    .servicio-content {
+      strong {
+        padding: $spacing-sm $spacing-md $spacing-xs;
+        font-size: 1rem;
+      }
+
+      p {
+        padding: 0 $spacing-md $spacing-md;
+        line-height: 1.6;
+      }
+    }
+  }
+}
