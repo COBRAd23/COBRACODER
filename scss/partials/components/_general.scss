@@ -108,7 +108,7 @@ h3 {
   display: block;
 
   @include responsive(mobile) {
-    max-width: 140px;
+    max-width: 160px;
   }
 }
 
