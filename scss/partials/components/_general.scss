@@ -70,7 +70,7 @@ body {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 
   @include responsive(mobile) {
-    max-width: 250px;
+    max-width: 100px;
   }
 }
 
@@ -82,7 +82,7 @@ body {
   margin: 0 auto $spacing-xs;
 
   @include responsive(mobile) {
-    max-width: 50px;
+    max-width: 100px;
   }
 }
 
