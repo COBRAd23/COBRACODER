@@ -4,12 +4,10 @@
 // fuente Cyber Brush (archivo local)
 @font-face {
   font-family: "Cyber Brush";
-  src: url('../../fonts/cyber-brush.ttf') format('truetype'),
-       url('../../fonts/cyber-brush.woff') format('woff'),
-       url('../../fonts/cyber-brush.woff2') format('woff2');
+  src: url('../../fonts/Cyber Brush.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 // font-family: "Montserrat", sans-serif;

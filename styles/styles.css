@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "Cyber Brush";
-  src: url("../../fonts/cyber-brush.ttf") format("truetype"), url("../../fonts/cyber-brush.woff") format("woff"), url("../../fonts/cyber-brush.woff2") format("woff2");
+  src: url("../../fonts/Cyber Brush.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 * {
   margin: 0;
@@ -89,13 +89,15 @@ body {
 }
 
 h1 {
-  font-family: "Cyber Brush", cursive;
+  font-family: "Cyber Brush", "Montserrat", sans-serif;
   font-weight: 400;
+  font-display: block;
 }
 
 h3 {
-  font-family: "Cyber Brush", cursive;
+  font-family: "Cyber Brush", "Montserrat", sans-serif;
   font-weight: 400;
+  font-display: block;
 }
 
 .section_one_inicio {
