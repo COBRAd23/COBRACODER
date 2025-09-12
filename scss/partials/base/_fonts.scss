@@ -1,8 +1,16 @@
 // fuente montserrat 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
 
-// fuente Cyber Brush
-@import url('https://fonts.googleapis.com/css2?family=Cyber+Brush:wght@400&display=swap');
+// fuente Cyber Brush (archivo local)
+@font-face {
+  font-family: "Cyber Brush";
+  src: url('../../fonts/cyber-brush.ttf') format('truetype'),
+       url('../../fonts/cyber-brush.woff') format('woff'),
+       url('../../fonts/cyber-brush.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 // font-family: "Montserrat", sans-serif;
 // font-family: "Cyber Brush", cursive;
