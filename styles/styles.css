@@ -132,7 +132,7 @@ body {
 }
 
 .logo-a {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
@@ -398,8 +398,8 @@ body {
 .imagenes-dobles .imagen-link .imagen-contenedor {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffcc00;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
 }
 .imagenes-dobles .imagen-link .imagen-contenedor img {
   width: 100%;
@@ -451,6 +451,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  gap: 6rem;
 }
 .filosofia::before {
   content: "";
@@ -465,12 +466,13 @@ body {
 .filosofia .contenido {
   max-width: 650px;
   width: 100%;
+  margin-bottom: 6rem;
   line-height: 1.8;
   position: relative;
   z-index: 1;
 }
 .filosofia .contenido p {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }

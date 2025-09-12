@@ -23,8 +23,8 @@
     .imagen-contenedor {
       position: relative;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border: 1px solid #ffcc00;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2); // efecto de halo
 
       img {
         width: 100%;
