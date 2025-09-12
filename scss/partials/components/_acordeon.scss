@@ -2,6 +2,13 @@
 @use "../utilities/mixins" as *;
 
 // Acordeón styles
+.accordion {
+  @include responsive(mobile) {
+    margin: 0 $spacing-sm;
+    max-width: calc(100% - 2rem);
+  }
+}
+
 .accordion-item {
   background-color: $primary-color;
   border: 1px solid $border-light;
@@ -62,10 +69,18 @@
   @include responsive(mobile) {
     .accordion-button {
       padding: $spacing-sm $spacing-md;
+      font-size: 0.9rem;
     }
 
     .accordion-body {
       padding: $spacing-sm $spacing-md;
+      max-width: calc(100% - 2rem);
+      margin: 0 auto;
+      
+      p {
+        line-height: 1.6;
+        margin-bottom: $spacing-sm;
+      }
     }
   }
 }
