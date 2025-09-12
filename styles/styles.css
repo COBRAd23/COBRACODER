@@ -507,12 +507,25 @@ body {
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+.filosofia .contenido:first-child {
+  color: #ffffff;
+}
+.filosofia .contenido:last-child {
+  color: rgba(255, 255, 255, 0.3);
+}
 @media (max-width: 768px) {
   .filosofia {
     padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 4rem;
   }
   .filosofia .contenido {
-    max-width: 100%;
+    max-width: calc(100% - 2rem);
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .filosofia .contenido:last-child {
+    margin-bottom: 0;
   }
 }
 
