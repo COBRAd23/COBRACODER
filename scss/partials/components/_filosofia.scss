@@ -45,13 +45,31 @@
       font-weight: $font-weight-bold;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
+
+    // Primer contenido (español) - blanco
+    &:first-child {
+      color: $text-light;
+    }
+
+    // Segundo contenido (inglés) - gris 30%
+    &:last-child {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @include responsive(mobile) {
     padding: $spacing-md $spacing-sm;
+    flex-direction: column;
+    gap: $spacing-lg;
 
     .contenido {
-      max-width: 100%;
+      max-width: calc(100% - 2rem);
+      margin: 0 auto;
+      margin-bottom: $spacing-lg;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 } 
