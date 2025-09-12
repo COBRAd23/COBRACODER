@@ -86,6 +86,19 @@ body {
   }
 }
 
+// Iconos de apps
+.iconos-apps {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin: $spacing-md auto 0;
+  display: block;
+
+  @include responsive(mobile) {
+    max-width: 120px;
+  }
+}
+
 // Sección de servicios
 .section_two_inicio {
   padding: $spacing-lg $spacing-md;
