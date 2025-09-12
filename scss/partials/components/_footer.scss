@@ -51,6 +51,11 @@
         flex-direction: column;
         text-align: center;
         gap: $spacing-sm;
+
+        p {
+          text-align: center;
+          margin: 0 auto;
+        }
       }
     }
   }
