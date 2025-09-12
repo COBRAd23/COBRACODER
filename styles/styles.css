@@ -282,6 +282,11 @@ body {
     margin: 0 auto !important;
     width: 100%;
   }
+  .footer .container .d-flex p.mb-2.mb-md-0 {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100%;
+  }
 }
 
 .formulario-contacto {
