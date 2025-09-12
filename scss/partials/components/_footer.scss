@@ -53,8 +53,9 @@
         gap: $spacing-sm;
 
         p {
-          text-align: center;
-          margin: 0 auto;
+          text-align: center !important;
+          margin: 0 auto !important;
+          width: 100%;
         }
       }
     }
