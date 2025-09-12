@@ -412,9 +412,12 @@ body {
     padding: 1rem 1rem;
   }
   .accordion-item .accordion-body p {
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    max-width: calc(100% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

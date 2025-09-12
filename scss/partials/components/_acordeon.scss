@@ -69,9 +69,12 @@
       padding: $spacing-sm $spacing-sm;
       
       p {
-        line-height: 1.6;
+        line-height: 1.7;
         margin-bottom: $spacing-sm;
-        padding: 0 $spacing-xs;
+        padding: 0 $spacing-sm;
+        max-width: calc(100% - 1rem);
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
