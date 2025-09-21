@@ -146,7 +146,7 @@ h3 {
   color: #ffcc00;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 .section_one_inicio p {
   margin-bottom: 0.5rem;
@@ -161,7 +161,7 @@ h3 {
 }
 
 .logo-a {
-  max-width: 150px;
+  max-width: 50px;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
@@ -174,7 +174,7 @@ h3 {
 }
 
 .logo-agl {
-  max-width: 420px;
+  max-width: 370px;
   width: 100%;
   height: auto;
   margin: 0 auto 0.5rem;
@@ -206,7 +206,7 @@ h3 {
 }
 .section_two_inicio h1 {
   margin-bottom: 4rem;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 2.5rem;
   color: #000000;
 }
@@ -266,7 +266,7 @@ h3 {
   position: relative;
   z-index: 2;
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -425,7 +425,7 @@ h3 {
 }
 .accordion-item .accordion-button h6 {
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -498,7 +498,7 @@ h3 {
   color: #ffffff;
   text-align: center;
   padding: 1rem;
-  font-weight: 700;
+  font-weight: 900;
   transition: background 0.3s ease;
 }
 .imagenes-dobles .imagen-link .imagen-contenedor:hover img {
@@ -590,7 +590,7 @@ h3 {
 .filosofia .contenido h2, .filosofia .contenido h3 {
   color: #ffcc00;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 900;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 .filosofia .contenido:first-child {
@@ -750,7 +750,7 @@ h3 {
 }
 .servicios-detalle .servicio-header h5 {
   margin: 0;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
