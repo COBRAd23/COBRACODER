@@ -67,7 +67,7 @@ h3 {
   h3 {
     color: $secondary-color;
     @include text-shadow(2px, 2px, 4px);
-    margin-bottom: $spacing-sm;
+    margin-bottom: $spacing-md;
     font-weight: $font-weight-bold;
   }
 
