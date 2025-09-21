@@ -507,6 +507,31 @@ h3 {
 .imagenes-dobles .imagen-link .imagen-contenedor:hover .overlay {
   background: rgba(0, 0, 0, 0.8);
 }
+.imagenes-dobles .imagen-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.imagenes-dobles .imagen-overlay img {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+}
+.imagenes-dobles .imagen-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffcc00;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+.imagenes-dobles .imagen-overlay:hover::after {
+  opacity: 1;
+}
+.imagenes-dobles .imagen-overlay:hover img {
+  filter: brightness(0.7);
+}
 @media (max-width: 992px) {
   .imagenes-dobles .imagen-link {
     flex: 1 1 calc(50% - 2rem);

@@ -57,6 +57,38 @@
     }
   }
 
+  .imagen-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      display: block;
+      @include transition(all);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $secondary-color;
+      opacity: 0;
+      @include transition(opacity);
+      z-index: 1;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+
+      img {
+        filter: brightness(0.7);
+      }
+    }
+  }
+
   @include responsive(tablet) {
     .imagen-link {
       flex: 1 1 calc(50% - #{$spacing-md});
