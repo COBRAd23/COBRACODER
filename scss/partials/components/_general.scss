@@ -85,7 +85,7 @@ h3 {
 
 // Logo
 .logo-a {
-  max-width: 50px;
+  max-width: 100px;
   width: 100%;
   height: auto;
   margin-bottom: $spacing-md;
@@ -98,10 +98,10 @@ h3 {
 
 // Logo nombre AGL
 .logo-agl {
-  max-width: 370px;
+  max-width: 300px;
   width: 100%;
   height: auto;
-  margin: 0 auto $spacing-xs;
+  margin: 0 auto $spacing-md;
 
   @include responsive(mobile) {
     max-width: 100px;

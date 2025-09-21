@@ -161,7 +161,7 @@ h3 {
 }
 
 .logo-a {
-  max-width: 50px;
+  max-width: 100px;
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
@@ -174,10 +174,10 @@ h3 {
 }
 
 .logo-agl {
-  max-width: 370px;
+  max-width: 300px;
   width: 100%;
   height: auto;
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 2rem;
 }
 @media (max-width: 768px) {
   .logo-agl {
